@@ -32,7 +32,7 @@ ip link set veth1 master br0
 
 VLAN（也称为虚拟LAN）通过向网络数据包添加标签来分隔广播域。VLAN使网络管理员可以将同一台交换机下或不同交换机之间的主机分组。
 
-![img](/Users/lichenlu/Desktop/md/img/vlan.jpeg)
+![img](./img/vlan.jpeg)
 
 ```Shell
 ip link add link eth0 name eth0.2 type vlan id 2
@@ -43,7 +43,7 @@ ip link add link eth0 name eth0.3 type vlan id 3
 
 VETH（虚拟以太网）设备是本地以太网隧道。设备是成对创建的，如下图所示。
 
-![img](/Users/lichenlu/Desktop/md/img/veth.png)
+![img](./md/img/veth.png)
 
 ## dummy
 
@@ -84,7 +84,7 @@ L3模式下的虚拟接口不会接收到多播或者广播的报文（ipvlan的
 
 VXLAN将带有VXLAN标头的第2层帧封装到UDP-IP数据包中，如下所示：
 
-![img](/Users/lichenlu/Desktop/md/img/vxlan.png)
+![img](./md/img/vxlan.png)
 
 ## NVGRE
 

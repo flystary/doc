@@ -1,6 +1,6 @@
 1. 拓扑图
 
-   ![](/Users/lichenlu/Desktop/md/7x-networks/img/e75c54a1.svg)
+   ![](./img/e75c54a1.svg)
 
    
 
