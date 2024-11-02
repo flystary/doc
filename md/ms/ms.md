@@ -3720,7 +3720,7 @@ iptables 是一个用于 Linux 操作系统的包过滤防火墙工具，可帮�
 
 ​	netfilter 是工作于内核空间当中的一系列网络协议栈的钩子（hook），为内核模块在网络协议栈中的不同位置注册回调函数。在数据包经过网络协议栈的不同位置时做相应的由 iptables 配置好的处理逻辑。 netfilter 中的五个钩子分别为PRE_ROUTING、INPUT、FORWARD、OUTPUT、POST_ROUTING，网络数据包的流向图如下图所示：
 
-![img](/Users/lichenlu/doc/md/ms/img/netfilter.png)
+![img](./img/netfilter.png)
 
 ```bash
 1.当主机/网络服务器网卡收到一个数据包之后进入内核空间的网络协议栈进行层层解封装
@@ -3743,7 +3743,7 @@ iptables 是一个用于 Linux 操作系统的包过滤防火墙工具，可帮�
 
 每个经过这个”关卡”的报文，都要将这条”链”上的所有规则匹配一遍，如果有符合条件的规则，则执行规则对应的动作。
 
-![img](/Users/lichenlu/doc/md/ms/img/08c111ffd.png)
+![img](./img/08c111ffd.png)
 
 ##### 表
 
@@ -3781,9 +3781,9 @@ iptables 是一个用于 Linux 操作系统的包过滤防火墙工具，可帮�
 
 #### 数据包经过流程
 
-![img](/Users/lichenlu/doc/md/ms/img/bf9b57.png)
+![img](./img/bf9b57.png)
 
-![img](/Users/lichenlu/doc/md/ms/img/9d6407f6.png)
+![img](./img/9d6407f6.png)
 
 #### 规则
 
@@ -3896,7 +3896,7 @@ destination:表示规则对应的目标地址。可以是一个IP，也可以是
 
 
 
-![img](/Users/lichenlu/doc/md/ms/img/68150971.png)
+![img](./img/68150971.png)
 
 `policy`表示当前链的默认策略，policy DROP表示上图中FORWARD的链的默认动作为DROP，换句话说就是，默认接受丢掉FORWARD关卡的所有请求，所以我们在配置FORWARD链的具体规则时，应该将需要允许的请求配置到规则中，说白了就是”白名单”机制，默认所有都拒绝，只有指定的通过。当我们把FORWARD链默认动作设置为接受(ACCEPT)，就表示所有人都能通过这个关卡，此时就应该在具体的规则中指定需要拒绝的请求，就表示只有指定的人不能通过这个关卡，这就是黑名单机制。
 
@@ -4035,7 +4035,7 @@ vim /etc/zabbix/zabbix_server.conf  #配置数据库密码
  vim /etc/httpd/conf.d/zabbix.conf
 ```
 
-![image-20210702102348573](img/image-20210702102348573.png)
+![image-20210702102348573](./img/image-20210702102348573.png)
 
 ##### 启动相关服务
 
@@ -4053,11 +4053,11 @@ systemctl enable httpd
 
 ###### 浏览器访问  http://ip/zabbix
 
-![image-20210702103010847](img/53.png)
+![image-20210702103010847](./img/53.png)
 
 
 
-![image-20210702103147769](img/769.png)
+![image-20210702103147769](./img/769.png)
 
 
 
@@ -4214,7 +4214,7 @@ CAP定理（CAP theorem）
 
 ##### Nosql分类和部分代表
 
-![](img/377.png)
+![](./img/377.png)
 
 ##### 企业常见Nosql应用
 
@@ -4242,7 +4242,7 @@ CAP定理（CAP theorem）
 
 ##### 架构
 
-![](img/757.png)
+![](./img/757.png)
 
 各功能模块说明如下：
 `File Event`: 处理文件事件，接受它们发来的命令请求（读事件），并将命令的执行结果返回给客户端（写事件）)
@@ -4259,7 +4259,7 @@ CAP定理（CAP theorem）
 
 ##### 启动流程
 
-![](img/931.png)
+![](./img/931.png)
 
 #####  安装
 
@@ -4363,7 +4363,7 @@ aof-load-truncated yes #指redis在恢复时,会忽略最后一条可能存在�
 
 redis之持久化存储读取
 
-![](img/66.png)
+![](./img/66.png)
 
 `RDB`：snapshotting, 二进制格式；按事先定制的策略，周期性地将数据从内存同步至磁盘；数据文件默认为dump.rdb；
 　　客户端显式使用SAVE或BGSAVE命令来手动启动快照保存机制；
@@ -4436,7 +4436,7 @@ slowlog reset：清空慢查询
 
 常用`数据类型`
 
-![](img/5140.png)
+![](./img/5140.png)
 
 Redis内部使用一个`redisObject`对象来表示所有的key和value,redisObject最主要的信息如上图所示：
 　　`type`代表一个value对象具体是何种数据类型
@@ -4549,7 +4549,7 @@ Redis的复制方式有两种；
 
 因此Redis的复制拓扑图会丰富一些，可以像星型拓扑，也可以像个有向无环。一个Master可以有多个slave主机，支持链式复制；Master以非阻塞方式同步数据至slave主机；
 
-![](img/619.png)
+![](./img/619.png)
 
 ###### 复制优点
 
