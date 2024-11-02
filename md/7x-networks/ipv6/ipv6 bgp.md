@@ -120,6 +120,6 @@
    3. network fd00:6:6:2::/64
       1. 必须在"address-family ipv6 unicast"里配置
    4. no bgp network import-check和no bgp ebgp-requires-policy，原来ipv4就有的配置，参考frr说明文档：
-   5. ![img](/Users/lichenlu/Desktop/md/7x-networks/img/jjj.png)
+   5. ![img](./img/jjj.png)
 
-   6. ![img](/Users/lichenlu/Desktop/md/7x-networks/img/kkkkk.png)
+   6. ![img](./img/kkkkk.png)

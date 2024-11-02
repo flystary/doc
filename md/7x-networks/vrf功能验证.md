@@ -38,7 +38,7 @@ ip route add 172.100.100.0/24 dev wifi
 ip route add 172.100.102.0/23 dev wifi
 ```
 
-5. ![](/Users/lichenlu/Desktop/md/7x-networks/img/qqqmage.png)
+5. ![](./img/qqqmage.png)
 
 6. 测试：
 

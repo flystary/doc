@@ -1062,7 +1062,7 @@ vars:
 [root@server ansible]# vim nginx.yml
 ```
 
-![](img/44.png)
+![](./img/44.png)
 
 **③ 运行剧本**
 
@@ -1274,7 +1274,7 @@ tcp    LISTEN     0      128       *:9999                  *:*                  
 
 #### 常用过滤规则
 
-![516](/Users/lichenlu/Desktop/md/ms/img/516.png)
+![516](./img/516.png)
 
 1. option 可选参数：将在后边一一解释。
 2. proto 类过滤器：根据协议进行过滤，可识别的关键词有： tcp, udp, icmp, ip, ip6, arp, rarp,ether,wlan, fddi, tr, decnet
@@ -1495,7 +1495,7 @@ tcpdump "( if=en0 and proc =nc ) || (if != en0 and dir=in)"
 
 ##### 使用tcpflags进行过滤
 
-![tcpflag.png](/Users/lichenlu/Desktop/md/ms/img/tcpflag.png.jpeg)
+![tcpflag.png](./img/tcpflag.png.jpeg)
 
 tcpdump 支持我们根据数据包的标志位进行过滤
 
@@ -1509,11 +1509,11 @@ proto [ expr:size ]
 
 1. tcpflags 别名常量，相当于13。代表着与指定的协议头开头相关的字节偏移量，也就是标志位，所以 tcp[tcpflags] 等价于 tcp[13] ，对应下图中的报文位置。
 
-![img](/Users/lichenlu/Desktop/md/ms/img/9fae.png)
+![img](./img/9fae.png)
 
 2. tcp-fin, tcp-syn, tcp-rst, tcp-push, tcp-ack, tcp-urg 这些同样可以理解为别名常量，分别代表 1，2，4，8，16，32，64。
 
-![img](/Users/lichenlu/Desktop/md/ms/img/10d.png)
+![img](./img/10d.png)
 
 ###### syn包
 
@@ -1616,7 +1616,7 @@ tcpdump -s 0 -A -vv 'tcp[((tcp[12:1] & 0xf0) >> 2):4]'
 - `tcp[n]`：表示 tcp 报文里 第 n 个字节
 - `tcp[n:c]`：表示 tcp 报文里从第n个字节开始取 c 个字节，tcp[12:1] 表示从报文的第12个字节（因为有第0个字节，所以这里的12其实表示的是13）开始算起取一个字节，也就是 8 个bit。可以得知这 8 个bit 其实就是下图中的红框圈起来的位置，而在这里我们只要前面 4个bit，也就是实际数据在整个报文首部中的偏移量。
 
-![img](/Users/lichenlu/Desktop/md/ms/img/9762c01.png)
+![img](./img/9762c01.png)
 
 - `&`：是and 操作符，比如 `0011 & 0010 = 0010`
 - `>>`：是位运算里的右移操作，比如 `0111 >> 2 = 0001`
@@ -1648,7 +1648,7 @@ tcp[((tcp[12:1] & 0xf0) >> 2):4]
 
 ```
 
-![img](/Users/lichenlu/Desktop/md/ms/img/2d6459.png)
+![img](./img/2d6459.png)
 
 ##### 从 HTTP 请求头中提取 HTTP 的 User-Agent
 
@@ -4673,7 +4673,7 @@ OSI先有模型，后有协议（出现晚）。
 
 
 
-![tcp-ip](/Users/lichenlu/Desktop/md/tcp-ip.gif)
+![tcp-ip](/Users/lichenlu/doc/md/img/tcp-ip.gif)
 
 
 
@@ -4715,17 +4715,17 @@ OSI先有模型，后有协议（出现晚）。
 
   ##### HTTP请求格式
 
-  ![](img/635.jpg)
+  ![](./img/635.jpg)
 
  	 URL包含：/index/index2?a=1&b=2；路径和参数都在这里。
 
-![](img/15370.png)
+![](./img/15370.png)
 
 ##### HTTP响应格式（响应协议）
 
-![](img/9411.jpg)
+![](./img/9411.jpg)
 
-![](img/087.png)
+![](./img/087.png)
 
 #### 
 

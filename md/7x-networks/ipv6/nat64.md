@@ -71,7 +71,7 @@
 
 2. ping测试
 
-   ![](/Users/lichenlu/Desktop/md/7x-networks/img/18af0f6a.png)
+   ![](./img/18af0f6a.png)
 
 ipv4 ping测试正常，解析到的ip是106.75.254.202
 

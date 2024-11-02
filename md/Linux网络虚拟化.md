@@ -43,7 +43,7 @@ ip link add link eth0 name eth0.3 type vlan id 3
 
 VETH（虚拟以太网）设备是本地以太网隧道。设备是成对创建的，如下图所示。
 
-![img](./md/img/veth.png)
+![img](./img/veth.png)
 
 ## dummy
 
@@ -84,7 +84,7 @@ L3模式下的虚拟接口不会接收到多播或者广播的报文（ipvlan的
 
 VXLAN将带有VXLAN标头的第2层帧封装到UDP-IP数据包中，如下所示：
 
-![img](./md/img/vxlan.png)
+![img](./img/vxlan.png)
 
 ## NVGRE
 
